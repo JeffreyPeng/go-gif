@@ -33,4 +33,4 @@ jobs:
         key: ${{ secrets.SSHKEY }}
         script: |
           cd /home/${{ secrets.USERNAME }}/deploy/go-gif
-          go run main.go
+          nohup go run main.go >> run.log 2>&1 &
